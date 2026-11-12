@@ -67,4 +67,13 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       $('.weight').text(pet_info['weight']);
       $('.happiness').text(pet_info['happiness']);
     }
-  
+    
+    function showPetMessage(message) {
+      var messageBox = $('#pet-message');
+      // Slide up method which hides the current pet message
+      messageBox.slideUp(200, function() {
+        messageBox.text(message);
+      // Slide down method which shows the new pet message
+        messageBox.slideDown(200);
+      });
+    }
