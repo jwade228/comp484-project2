@@ -18,26 +18,29 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     var pet_info = {name:"Coco", weight:"13", happiness:"50"};
   
     function clickedTreatButton() {
+    // Treats make coco happier but makes him gain some weight.
     pet_info.happiness += 10;
     pet_info.weight += 2;
       checkAndUpdatePetInfoInHtml();
     }
     
     function clickedPlayButton() {
-      // Increase pet happiness
-      // Decrease pet weight
+      // Playing makes coco happier but makes him lose some weight.
+      pet_info.happiness += 10;
+      pet_info.weight -= 1;
       checkAndUpdatePetInfoInHtml();
     }
     
     function clickedExerciseButton() {
-      // Decrease pet happiness
-      // Decrease pet weight
+    // Exercising makes Coco happier but makes him lose weight.
+    pet_info.happiness -= 5;
+    pet_info.weight -= 2;
       checkAndUpdatePetInfoInHtml();
     }
   
     function clickedRestButton() {
-      // Increase pet happiness
-      // Increase pet weight
+    // Resting hellping Coco feel happy while allowing his weight to stat the same,
+    pet_info.happiness += 8;
       checkAndUpdatePetInfoInHtml();
     }
 
@@ -47,7 +50,15 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     }
     
     function checkWeightAndHappinessBeforeUpdating() {
+      // The Weight of coco cant go lower than zero.
       // Add conditional so if weight is lower than zero.
+      if (pet_info.weight < 0) {
+        pet_info.weight = 0;
+      }
+      // The Happiness of coco cant go lower than zero.
+      if (pet_info.happiness < 0) {
+        pet_info.happiness = 0;
+      }
     }
     
     // Updates your HTML with the current values in your pet_info object
