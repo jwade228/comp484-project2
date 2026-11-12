@@ -9,8 +9,12 @@
   }
   
   main {
-    display:block;
-    height:175px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    min-height: 400px;
+    padding: 30px;
   }
   
   header {
