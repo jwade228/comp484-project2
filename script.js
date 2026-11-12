@@ -70,8 +70,28 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       $('.name').text(pet_info['name']);
       $('.weight').text(pet_info['weight']);
       $('.happiness').text(pet_info['happiness']);
+
+      updateMood();
     }
-    
+
+    function updateMood() {
+      var mood;
+      var  moodColor;
+      if (pet_info.happiness >= 50) {
+        mood = "Happy";
+        moodColor = "#2e8b57"; // Dark green
+      } else if (pet_info.happiness >= 25) {
+        mood = "Okay";
+        moodColor = "#ffd700"; // Gold
+      } else {
+        mood = "Tired";
+        moodColor = "#dc3545"; // Red
+      }
+      $('.mood').text(mood);
+      $('.mood').css('color', moodColor);
+      document.querySelector(".mood").style.color = moodColor;
+    }
+
     function showPetMessage(message) {
       var messageBox = $('#pet-message');
       // Slide up method which hides the current pet message

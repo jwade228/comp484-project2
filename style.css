@@ -33,6 +33,14 @@
   color: #007bff;
   }
   
+  header p {
+    width: 100%;
+    max-width: none;
+    margin: 10px auto 0;
+    text-align: center;
+    color: #555;
+    font-size: 20px;
+  }
   .bold {
     font-weight: bold;
   }
@@ -78,13 +86,23 @@
   }
   
   .dashboard {
+    min-width: 300px;
     padding:30px;
-    background-color: rgb(162, 0, 255);
+    background-color: #f8f9fa;
+    color:#243447;
+    border-top: 4px solid #007bff;
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-    min-width: 300px;
   }
   
+  .dashboard > div {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .dashboard strong {
+    color: #8b5e3c;
+  }
   .button-container {
     display:flex;
     flex-wrap: wrap;
