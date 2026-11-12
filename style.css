@@ -4,8 +4,11 @@
   }
   
   body {
-    font-family: helvetica, arial, sans-serif;
-    margin: 25px;
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #dff6ff, #fce4ec);
+  color: #243447;
   }
   
   main {
@@ -18,12 +21,16 @@
   }
   
   header {
-    border-bottom: 1px solid black;
+    padding: 35px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-bottom: 4px solid #007bff;
   }
   
   h1 {
-    font-weight: bold;
-    color: #000;
+  margin: 0;
+  font-size: 55px;
+  color: #007bff;
   }
   
   .bold {
@@ -50,39 +57,57 @@
   }
   
   .pet-image {
-    height:250px;
+    width: 290px;
+    height:290px;
+    object-fit: cover;
+    border-radius: 12px;
+    display:block;
   }
   
   .dashboard div {
     display:block;
+    margin-bottom: 10px;
   }
   
   .pet-image-container {
-    float:left;
-    padding:10px;
+   padding: 20px;
+   background-color: white;
+   border-radius: 15px;
+   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+
   }
   
   .dashboard {
-    float:left;
-    padding:20px;
+    padding:30px;
+    background-color: rgb(162, 0, 255);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    min-width: 300px;
   }
   
   .button-container {
-    margin-top:20px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
   }
   
   .button-container button {
-    width: 100px;
-      margin-right: 10px;
-      text-align: center;
-      display: inline-block;
-      float: left;
-    font-size:15px;
-    background-color: #1e2835;
-    border-color: #404853;
-    cursor:pointer;
-    background-image: linear-gradient(to bottom,rgba(246,246,246,.1)0%,rgba(30,40,53,0)66%);
-    color: #fafafa;
+  min-width: 100px;
+  padding: 10px 13px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .button-container button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
   }
 
   #pet-message {
