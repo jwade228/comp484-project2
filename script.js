@@ -21,6 +21,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     // Treats make coco happier but makes him gain some weight.
     pet_info.happiness += 10;
     pet_info.weight += 2;
+    showPetMessage("Coco loved his treat!");
       checkAndUpdatePetInfoInHtml();
     }
     
@@ -28,6 +29,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       // Playing makes coco happier but makes him lose some weight.
       pet_info.happiness += 10;
       pet_info.weight -= 1;
+      showPetMessage("Coco had a fun time playing!");
       checkAndUpdatePetInfoInHtml();
     }
     
@@ -35,12 +37,14 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     // Exercising makes Coco happier but makes him lose weight.
     pet_info.happiness -= 5;
     pet_info.weight -= 2;
+      showPetMessage("Coco felt tired after exercising.");
       checkAndUpdatePetInfoInHtml();
     }
   
     function clickedRestButton() {
     // Resting hellping Coco feel happy while allowing his weight to stat the same,
     pet_info.happiness += 8;
+      showPetMessage("Coco felt rested and happy.");
       checkAndUpdatePetInfoInHtml();
     }
 
@@ -74,6 +78,6 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       messageBox.slideUp(200, function() {
         messageBox.text(message);
       // Slide down method which shows the new pet message
-        messageBox.slideDown(200);
+        messageBox.slideDown(500);
       });
     }
