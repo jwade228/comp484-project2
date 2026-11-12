@@ -7,6 +7,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     $('.treat-button').click(clickedTreatButton);
     $('.play-button').click(clickedPlayButton);
     $('.exercise-button').click(clickedExerciseButton);
+    $('.rest-button').click(clickedRestButton);
   
 
   
@@ -14,11 +15,11 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
   })
   
     // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
-    var pet_info = {name:"My Pet Name", weight:"??", happiness:"??"};
+    var pet_info = {name:"Coco", weight:"13", happiness:"50"};
   
     function clickedTreatButton() {
-      // Increase pet happiness
-      // Increase pet weight
+    pet_info.happiness += 10;
+    pet_info.weight += 2;
       checkAndUpdatePetInfoInHtml();
     }
     
@@ -34,6 +35,12 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       checkAndUpdatePetInfoInHtml();
     }
   
+    function clickedRestButton() {
+      // Increase pet happiness
+      // Increase pet weight
+      checkAndUpdatePetInfoInHtml();
+    }
+
     function checkAndUpdatePetInfoInHtml() {
       checkWeightAndHappinessBeforeUpdating();  
       updatePetInfoInHtml();
