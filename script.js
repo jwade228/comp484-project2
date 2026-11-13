@@ -63,6 +63,10 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       if (pet_info.happiness < 0) {
         pet_info.happiness = 0;
       }
+
+      if (pet_info.happiness > 100) {
+        pet_info.happiness = 100;
+      } 
     }
     
     // Updates your HTML with the current values in your pet_info object
@@ -91,6 +95,9 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       if (pet_info.weight <= 5) {
         mood = "Tired";
         moodColor = "#dc3545"; // Red
+      } else if (pet_info.weight <= 8) {
+        mood = "Okay";
+        moodColor = "#ffd700"; // Gold  
       }
 
       $('.mood').text(mood);
