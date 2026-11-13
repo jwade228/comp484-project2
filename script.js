@@ -64,6 +64,10 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
         pet_info.happiness = 0;
       }
 
+      if (pet_info.weight > 22) {
+        pet_info.weight = 22;
+      }
+
       if (pet_info.happiness > 100) {
         pet_info.happiness = 100;
       } 
@@ -81,24 +85,16 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     function updateMood() {
       var mood;
       var  moodColor;
-      if (pet_info.happiness >= 50) {
-        mood = "Happy";
-        moodColor = "#2e8b57"; // Dark green
-      } else if (pet_info.happiness >= 25) {
-        mood = "Okay";
-        moodColor = "#ffd700"; // Gold
-      } else {
-        mood = "Tired";
-        moodColor = "#dc3545"; // Red
-      }
-
-      if (pet_info.weight <= 5) {
-        mood = "Tired";
-        moodColor = "#dc3545"; // Red
-      } else if (pet_info.weight <= 8) {
-        mood = "Okay";
-        moodColor = "#ffd700"; // Gold  
-      }
+    if (pet_info.weight <= 5) {
+    mood = "Tired";
+   moodColor = "#dc3545";
+   } else if (pet_info.weight <= 11 || pet_info.happiness < 50) {
+   mood = "Okay";
+   moodColor = "#ffd700";
+  } else {
+  mood = "Happy";
+  moodColor = "#2e8b57";
+}
 
       $('.mood').text(mood);
       $('.mood').css('color', moodColor);
