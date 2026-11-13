@@ -87,6 +87,12 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
         mood = "Tired";
         moodColor = "#dc3545"; // Red
       }
+
+      if (pet_info.weight <= 5) {
+        mood = "Tired";
+        moodColor = "#dc3545"; // Red
+      }
+
       $('.mood').text(mood);
       $('.mood').css('color', moodColor);
       document.querySelector(".mood").style.color = moodColor;
